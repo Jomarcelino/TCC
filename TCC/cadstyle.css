@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --default-color: #fa7f72;
+}
+::selection{
+     background-color: var(--default-color); 
+     color: white ; 
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--default-color);
+    padding: 40px;
+    
+}
+.w50{
+    width: 50%;
+    float: left;
+    padding-right: 15;
+}
+.box{
+    display: flex;
+    width: 930px; 
+
+
+}
+
+
+.img-box{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    border-radius: 20px 0 0 20px;
+}
+.img-box img {
+    width: 100%;
+}
+.form-box {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(40px);
+    padding: 30px 40px;
+    width: 50%;
+    border-radius: 0 20px 20px 0;
+}
+.form-box h2{
+    font-size: 30px;
+}
+.form-box p{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.form-box p a{
+    color:#3701f8;
+    text-decoration: none;
+}
+.form-box form{
+    margin: 20px 0
+}
+form .input-group{
+    margin-bottom: 15px;
+}
+form .input-group label{
+    color: black;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+.box .form-box .input-group{
+font-size: 30px;
+
+}
+
+
+  .input-group input{
+    width: 100%;
+    height: 47px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color:blueviolet;
+    transition: all 0.4s ease;
+} 
+
+
+
+form .input-group input:focus{
+    border-color: #6440e6;
+}
+botao form .input-group button{
+    width: 100%;
+    height: 47px;
+    background: pink;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: black;
+    cursor: pointer;
+    font-size: 17px;
+}
+.button {
+    background-color: #e27979;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+@media (max-width:930px){
+    .img-box{
+        display: none;
+    }
+    .box{
+        width: 700px;
+    }
+    .form-box{
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .w50{
+        width: 100%;
+        padding: 0;
+    }
+}

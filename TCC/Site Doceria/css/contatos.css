@@ -1,0 +1,35 @@
+ h2{
+    color: rgb(181, 4, 252);
+    position: absolute;
+    top: 43%;
+    left: 38%;
+    border: 2px wheat;
+ }
+
+ .botao-grupo .botao{
+    background-color: rgb(230, 24, 151);
+    border: 1px solid rgb(255, 0, 234);
+    border-radius: 12px;
+    color: rgb(0, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+}
+
+.botao-grupo{
+  position: absolute;
+  top: 50%;
+  left: 35%;
+}
+
+.botao-grupo .botao:not(:last-child) {
+    border-right: none;
+  }
+  
+  .bota-grupo .botao:hover {
+    background-color: #ff00ff;
+  }

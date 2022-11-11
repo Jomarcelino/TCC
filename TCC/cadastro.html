@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("servidor.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width-device-width, initial-scale=1">
     <title>Cadastrar</title>
-    <link rel="stylesheet" type="text/css" href="teste.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/style-cad.css" /> 
 
 </head>
 <body>
@@ -17,7 +18,7 @@ session_start();
     <div class="cadForm">
         <div class="form-box">
             <h2>Criar conta</h2>
-            <p>Já tem uma conta? <a href="index.html">clique aqui</a> </p>
+            <p>Já tem uma conta? <a href="login.html">clique aqui</a> </p>
             
             <div class="input-box">
                 <label for="nome">Nome completo</label>
@@ -32,14 +33,11 @@ session_start();
             <div class="input-box">
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" placeholder="Digitar senha" required>
-                <!-- <input type="button" value="mostrar senha" onmousedown="mostrarSenha()" onmouseup="ocultarSenha()"> -->
             </div>
 
             <div class="input-box">
                 <label for="confirmasenha">Confirmar senha</label>
                 <input type="password" id="confirmasenha" placeholder="Confirmar senha" required>
-                <!-- <input type="button" value="mostrar senha" onmousedown="mostrar_senha()" onmouseup="ocultar_senha()"> -->
-
             </div>
             
             <div class="input-box">
@@ -48,8 +46,14 @@ session_start();
         </div>
     </div>
     <div class="cad-img">
-        <img src="doces_julietta.png" width="100%">
+        <img src="imagens/doces_julietta.png" width="100%">
     </div>
 </div>
+
+
+<?php
+
+
+?>
 </body>
 </html>

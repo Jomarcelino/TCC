@@ -1,36 +1,39 @@
+<?php
+session_start();
+include("servidor.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-home.css">
+    <link rel="stylesheet" href="css/style-home.css">
     <title>Doces Julietta</title>
 </head>
 <body>
+    <main>    
+        <header>
+            <nav>
+                <div class="logo"> <a href="home.html"> <img src="./imagens/logo2s.png" width="113px" height="100px"/></a></div>
 
-    <header>
-        <nav>
-            <a class="logo"> <img src="./imagens/logo2s.png" width="113px" height="100px"/></a>
+                <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                </div>
 
-            <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-            </div>
-
-            <ul class="nav-list">
-                <li><a href="login.html">LOGIN</a></li>
-                <li><a href="#">PRODUTOS</a></li>
-                <li><a href="contatos.html">CONTATOS</a></li>
-            </ul>
-        </nav>
-    </header>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    </style>
-    <main>
-
-      <div class="carrosel">
+                <ul class="nav-list">
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="#">PRODUTOS</a></li>
+                    <li><a href="contatos.html">CONTATOS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <style>@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        </style>
+        <div class="carrosel">
             <div class="slides">
                   <input type="radio" name="radio" id="slide1" checked>
                   <input type="radio" name="radio" id="slide2">
@@ -66,7 +69,8 @@
        <!--fim do carrosel-->
 
              <!--começo do card tradicional-->
-        <div class="CardTradicional">
+        
+             <div class="CardTradicional">
 
             <!--Primero card-->
             <div class="card">
@@ -153,8 +157,7 @@
                 <h1>R$2,39</h1>
             </div>
         </div>
-        <!--fim do card gourmet-->
-        
+        <!--fim do card gourmet--> 
     </main>
     <script src="mobile-navbar.js"></script>
 </body>

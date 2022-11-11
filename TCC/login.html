@@ -1,3 +1,8 @@
+<?php
+session_start();
+include("servidor.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +12,7 @@
     <!-- font awesome CDN link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Link CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style-login.css">
     <title>Login</title>
 </head>
 <body>
@@ -15,11 +20,11 @@
         <!-- login form -->
         <div class="login-form">
             <div class="title">Login</div>
-            <form action="#">
+            <form action="procLogin.php" method="post">
 
                 <div class="input-box">
                     <i class="fa fa-envelope"></i>
-                    <input type="text" placeholder="Insira seu Email" required>
+                    <input type="email" placeholder="Insira seu Email" required>
                 </div>
 
                 <div class="input-box">
@@ -28,7 +33,7 @@
                 </div>
                 <div class="forgot"> <a href="#">Esqueceu a Senha?</a></div>
                 <div class="input-box">
-                    <input type="submit" value="Entrar">
+                    <input type="submit" value="Entrar" href="home.html">
                 </div>
                 <div class="divider"> ou </div>
                 <div class="redes-sociais">
@@ -43,9 +48,11 @@
         <!-- end login form -->
         <!-- login img -->
         <div class="login-img">
-            <img src="doces_julietta.png" width="100%">
+            <img src="Imagens/doces_julietta.png" width="100%">
         </div>
         <!-- end login img -->
     </div>
 </body>
+<script src="../js/jquery-3.5.1.slim.min.js" ></script>
+<script src="../js/popper.min.js" ></script>
 </html>

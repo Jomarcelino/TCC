@@ -9,8 +9,8 @@ $senha = $_POST['senha'];
 
 //echo $login . " " . $senha; 
 
-$sql = " select  * from tb_cliente " ;
-$sql .= " where Cli_email = '".$login."' and  Cli_senha ='".md5($senha)."'";
+$sql = " SELECT  * FROM tb_Cliente WHERE Cli_email = '".$login."' AND  Cli_senha ='".md5($senha)."'" ;
+// $sql = " WHERE Cli_email = '".$login."' AND  Cli_senha ='".md5($senha)."'";
 
 //echo $sql;
 
@@ -28,7 +28,7 @@ $sql .= " where Cli_email = '".$login."' and  Cli_senha ='".md5($senha)."'";
 
    $resultado = $OOP->query($sql);
 
-      //$OOP->query($sql);
+      $OOP->query($sql);
    //direcionar para a tela menu.php
 
    // if($OOP->num_rows == 1 ){
@@ -43,7 +43,7 @@ $sql .= " where Cli_email = '".$login."' and  Cli_senha ='".md5($senha)."'";
 
     $OOP->close();
     
-    header("location:adm.html");
+    header("location:adm.php");
    }else{
-      header("location:login.php");
+      header("location:login.html");
    }

@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 USE DOCE_JULIETTA;
 
 CREATE TABLE `tb_carrinho_pertence` (
-  `Car_Codigo` int(11) DEFAULT NULL,
+  `Car_Codigo` int(11) NOT NULL,
   `Car_Quantidade` int(11) DEFAULT NULL,
   `fk_TB_Compra_Com_Codigo` int(11) NOT NULL,
   `fk_TB_Doces_Doc_Codigo` int(11) NOT NULL
@@ -32,7 +32,7 @@ CREATE TABLE `tb_carrinho_pertence` (
 --
 
 CREATE TABLE `tb_cliente` (
-  `Cli_Codigo` int(11) DEFAULT NULL,
+  `Cli_Codigo` int(11) NOT NULL,
   `Cli_Email` varchar(50) DEFAULT NULL,
   `Cli_Senha` varchar(12) DEFAULT NULL,
   `Cli_Nome` varchar(50) DEFAULT NULL,
@@ -49,7 +49,7 @@ INSERT INTO tb_cliente(Cli_Nome, Cli_Email, Cli_Senha) VALUES ("adm","docejuliet
 --
 
 CREATE TABLE `tb_compra` (
-  `Com_Codigo` int(11) DEFAULT NULL,
+  `Com_Codigo` int(11) NOT NULL,
   `Com_Data` date DEFAULT NULL,
   `Com_Metodo_de_pagamento` varchar(20) DEFAULT NULL,
   `fk_TB_Cliente_CLI_Codigo` int(11) DEFAULT NULL
@@ -60,10 +60,11 @@ CREATE TABLE `tb_compra` (
 --
 
 CREATE TABLE `tb_doces` (
-  `Doc_Codigo` int(11) DEFAULT NULL,
+  `Doc_Codigo` int(11) NOT NULL,
   `Doc_Nome` varchar(50) DEFAULT NULL,
   `Doc_Preco` decimal(10,0) DEFAULT NULL,
-  `Doc_Descricao` varchar(180) DEFAULT NULL
+  `Doc_Descricao` varchar(180) DEFAULT NULL,
+  `Doc_Img` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

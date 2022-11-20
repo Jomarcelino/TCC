@@ -20,7 +20,7 @@
            die( "Falha na conexão, motivo : " . mysqli_connect_erro());
        } 
        else{
-           echo "conexão efetuada"; 
+           //echo "conexão efetuada"; 
        }
     // Orientação Objeto
 

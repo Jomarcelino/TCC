@@ -20,7 +20,7 @@ session_start();
         <Form action="cadastro.php" method="POST">
             <div class="form-box">
                 <h2>Criar conta</h2>
-                <p>Já tem uma conta? <a href="login.html">clique aqui</a> </p>
+                <p>Já tem uma conta? <a href="login.php">clique aqui</a> </p>
                 
                 <div class="input-box">
                     <label for="nome">Nome completo</label>
@@ -66,7 +66,7 @@ if(isset($_POST['submit'])){
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-$senha = $_POST['senha'];
+$senha = $_POST['senha']; $criptografia=md5($senha);
 $telefone = $_POST['telefone'];
 
 $sql = mysqli_query($banco, "INSERT INTO `tb_cliente`(
@@ -74,7 +74,7 @@ $sql = mysqli_query($banco, "INSERT INTO `tb_cliente`(
     `Cli_Senha`, 
     `Cli_Nome`,  
     `Cli_Numero`) 
-    VALUES ('$nome','$email','$senha','$telefone')");
+    VALUES ('$email','$criptografia','$nome','$telefone')");
 
 if (mysqli_affected_rows($banco)){
     echo "<script type='text/javascript'>
@@ -90,7 +90,7 @@ if (mysqli_affected_rows($banco)){
 //     header('Location:cadastro.php');
 // }else{
 //     echo 'cadastro efetuado';
-//     header('Location:login.html');
+//     header('Location:login.php');
 // }
 }
 //copiar cod projeto de cadproduto

@@ -22,6 +22,7 @@ include('servidor.php');
             <section class="col-md-2">
             </section>
             <section class="col-md-8">
+                <a href="adm.php">Voltar</a>
                 <h3 class="mt-5">Cadastro de doce</h2>
 
                     <form action="cadProduto.php" method="post" enctype="multipart/form-data">
@@ -44,27 +45,6 @@ include('servidor.php');
                             </div>
                         </div>
 
-                        <!-- <div class="form-group">
-                            <label for="ed">Editora: </label>
-                            
-                            <?php
-                            // $editora = " select * from tb_editora ";
-                            // $resultado = mysqli_query($banco , $editora);
-                            ?> 
-
-                            <select class="form-control" name="ed" id="ed">
-                            
-                                <option> selecione ... </option>
-                                <?php
-                                // while($tbEditora = mysqli_fetch_array($resultado)){
-                                //     echo "<option value='".$tbEditora["cod_ed"] ."'>".$tbEditora["nome_ed"]."</option>";
-                                // }
-                                ?>
-                            
-                            </select>
-
-                        </div> -->
-
                         <div class="form-group " style="width:30%;">
                             <label for="valor">Valor: </label>
 
@@ -76,7 +56,9 @@ include('servidor.php');
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
-                    </form>
+                        
+                                            
+    </form>
             </section>
 
             <section class="col-md-2"></section>

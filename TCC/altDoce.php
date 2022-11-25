@@ -1,20 +1,17 @@
-tit<?php
+<?php
 // iniciar session;
 session_start();
 // incluir o servidor
 include('servidor.php');
-
 ?>
-
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <title>Alterar doce</title>
 </head>
 
 <body>
@@ -25,55 +22,53 @@ include('servidor.php');
             </section>
 
             <?php
-
-
-            //    if(!empty($_GET['id']))
-            //    {$id = $_GET['id'];
-            //        $sqlSelect = "SELECT * FROM tb_doces WHERE id=$id";
-            //        $result = $conexao->query($sqlSelect);
-            //        if($result->num_rows > 0)
-            //        {
-            //            while($user_data = mysqli_fetch_assoc($result))
-            //            {
-            //                $titulo = $user_data['titulo'];
-            //                $desc = $user_data['desc'];
-            //                $dir = $user_data['dir'];
-            //                $valor = $user_data['valor'];
-            //            }
-            //        }
-            //        else
-            //        {
-            //            header('Location: lista_livro.php');
-            //        }
-            //    }
-            //    else
-            //    {
-            //        header('Location: lista_livro.php');
-            //    }
+               if(!empty($_GET['id']))
+               {$id = $_GET['id'];
+                   $sqlSelect = "SELECT * FROM tb_doces WHERE id=$id";
+                   $result = $conexao->query($sqlSelect);
+                   if($result->num_rows > 0)
+                   {
+                       while($user_data = mysqli_fetch_assoc($result))
+                       {
+                           $titulo = $user_data['titulo'];
+                           $desc = $user_data['desc'];
+                           $dir = $user_data['dir'];
+                           $valor = $user_data['valor'];
+                       }
+                   }
+                   else
+                   {
+                       header('Location: lista_livro.php');
+                   }
+               }
+               else
+               {
+                   header('Location: lista_livro.php');
+               }
                    
 
             ?>
 
             <section class="col-md-8">
-                <h3 class="mt-5">Altera Livro</h2>
+                <h3 class="mt-5">Altera Doces</h2>
 
-                    <form action="procAltLivro.php" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="cod_liv" value="<?php echo $campo["cod_liv"] ?>">    
+                    <form action="procAltDoce.php" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="Doc_codigo" value="<?php echo $campo["Doc_codigo"] ?>">    
                     
                     
                     <div class="form-group">
-                            <label for="t">Titulo : </label>
-                            <input type="text" class="form-control" id="t" name="titulo" 
-                            value="<?php echo $campo["titulo_liv"] ?>">
+                            <label for="nome">Nome do doce : </label>
+                            <input type="text" class="form-control" id="nome" name="nome" 
+                            value="<?php echo $campo["Doc_nome"] ?>">
                         </div>
                         <div class="form-group">
                             <label for="desc">Descrição : </label>
-                            <textarea name="desc" class="form-control" id="desc"><?php echo $campo["desc_liv"] ?></textarea>
+                            <textarea name="desc" class="form-control" id="desc"><?php echo $campo["Doc_descricao"]?></textarea>
                         </div>
 
                        
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="ed">Editora: </label>
 
                             <?php
@@ -94,7 +89,7 @@ include('servidor.php');
 
                             </select>
 
-                        </div>
+                        </div> -->
 
 
                         <div class="form-group " style="width:30%;">
@@ -105,7 +100,7 @@ include('servidor.php');
                                     <div class="input-group-text">$</div>
                                 </div>
                                 <input type="text" class="form-control" id="valor" name="valor"
-                                value="<?php echo $campo["valor_liv"] ?>"
+                                value="<?php echo $campo["Doc_Preco"] ?>"
                                 >
                             </div>
                         </div>

@@ -4,15 +4,15 @@ session_start();
 include('servidor.php');
 
 // variavel post
-$nome = $_POST["nome"];
-$desc = $_POST["desc"];
-$valor = $_POST["valor"];
+$nome = $_POST['nome'];
+$desc = $_POST['desc'];
+$valor = $_POST['valor'];
 // echo $ed = $_POST["ed"];
 
-$imagem = $_FILES["arq"];
+$imagem = $_FILES['arq']['name'];
 
 //1º colocar o caminho da imagen no banco
-$dir = "imagens/" .$imagem["name"];
+//$dir = "imagens/" .$imagem["name"];
 
 //2º os dados do banco
     $sql = "INSERT INTO tb_doces( 
@@ -26,8 +26,9 @@ $dir = "imagens/" .$imagem["name"];
     $resp = mysqli_query($banco , $sql);
 
     //saber se algo foi executado no banco()
-    if (mysqli_affected_rows($resp)){
+    if (mysqli_affected_rows($banco)){
         echo "<script type='text/javascript'>
-        alert('cadastro efetuado);
+        alert('cadastro efetuado');
+        window.location.href='cadDoce.php';
         </script>";
     }

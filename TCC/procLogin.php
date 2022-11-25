@@ -4,12 +4,14 @@ include("servidor.php");
 
 // iremos pegar o dados preenchido no formulario
 
-$login = $_POST['login'];
-$senha = $_POST['senha'];
+// $login = $_POST['login'];
+// $senha = $_POST['senha'];
+
+extract($_POST);
 
 //echo $login . " " . $senha; 
 
-$sql = " SELECT  * FROM tb_Cliente WHERE Cli_email = '".$login."' AND  Cli_senha ='".md5($senha)."'" ;
+$sql = " SELECT  * FROM tb_Cliente WHERE Cli_email = '".$email."' AND  Cli_senha ='".md5($senha)."'" ;
 // $sql = " WHERE Cli_email = '".$login."' AND  Cli_senha ='".md5($senha)."'";
 
 //echo $sql;
@@ -45,5 +47,5 @@ $sql = " SELECT  * FROM tb_Cliente WHERE Cli_email = '".$login."' AND  Cli_senha
     
     header("location:adm.php");
    }else{
-      header("location:login.html");
+      header("location:login.php");
    }

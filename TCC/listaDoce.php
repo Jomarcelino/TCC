@@ -43,11 +43,11 @@ include_once("servidor.php");
                         <td>".$tabela["Doc_Nome"]."</td>
                         <td>R$  ".number_format($tabela["Doc_Preco"], 2, ",",".")."</td> 
                         <td>
-                            <a href='ProcAltDoce.php?Doc_Codigo=".$tabela["Doc_Codigo"]."'> 
-                                <img src='img/edit.png' width='32' title='Editar'></a> |
+                            <a href='altDoce.php?Doc_Codigo=".$tabela["Doc_Codigo"]."'> 
+                                <img src='imagens/botao-editar.png' width='32' title='Editar'></a> |
                             
                                 <a href='ProcDelDoce.php?Doc_Codigo=".$tabela["Doc_Codigo"]."'> 
-                            <img src='img/delete.png' width='32' title='Deletar'></a>
+                            <img src='imagens/caixote-de-lixo.png' width='32' title='Deletar'></a>
                         </td>  
                         </tr>";
                 }

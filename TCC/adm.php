@@ -1,6 +1,15 @@
 <?php
 session_start();
 include("servidor.php");
+
+
+if($_SESSION["idADM"] || $_SESSION["usuarioADM"])
+{
+// Usuário não logado! Redireciona para a página de login
+header("Location: dashboard.php");
+exit;
+}else {
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,7 +42,7 @@ include("servidor.php");
         <a class="nav-link" href="listaDoce.php" target="link">Lista de Doces</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Sair</a>
+        <a class="nav-link" href="index.php">Sair</a>
       </li>
     </ul>
   </div>
@@ -47,3 +56,5 @@ include("servidor.php");
 <script src="js/popper.min.js"></script>
 
 </html>
+
+<?php } ?>

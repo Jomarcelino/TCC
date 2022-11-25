@@ -22,7 +22,7 @@
 body{
   width: 100%;
   height: 100px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center; 
   background-color: var(--default-color);
@@ -120,7 +120,7 @@ nav {
 main {
   background: #fa7f72;
   background-size: cover;
-  height: 92vh;
+  /* height: 92vh; */
 }
 
  .container{
@@ -309,7 +309,7 @@ main {
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-6px, -7px);
 }
-.footer{
+/* .footer{
   position: absolute;
   bottom: 0;
   background-color: brown;
@@ -318,7 +318,7 @@ main {
   height: 100px;    
   text-align: center;
   line-height: 100px;
-}
+} */
 .container .login-form .redes-sociais{
   text-align: center;
 }

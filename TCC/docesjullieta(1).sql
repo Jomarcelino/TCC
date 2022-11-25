@@ -32,7 +32,7 @@ CREATE TABLE `tb_carrinho_pertence` (
 --
 
 CREATE TABLE `tb_cliente` (
-  `Cli_Codigo` int(11) NOT NULL,
+  `Cli_Codigo` int(11)  PRIMARY KEY AUTO_INCREMENT,
   `Cli_Email` varchar(50) DEFAULT NULL,
   `Cli_Senha` varchar(12) DEFAULT NULL,
   `Cli_Nome` varchar(50) DEFAULT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE `tb_compra` (
 --
 
 CREATE TABLE `tb_doces` (
-  `Doc_Codigo` int(11) NOT NULL,
+  `Doc_Codigo` int(11) PRIMARY KEY AUTO_INCREMENT,
   `Doc_Nome` varchar(50) DEFAULT NULL,
   `Doc_Preco` decimal(10,0) DEFAULT NULL,
   `Doc_Descricao` varchar(180) DEFAULT NULL,
@@ -82,8 +82,8 @@ ALTER TABLE `tb_carrinho_pertence`
 --
 -- Índices para tabela `tb_cliente`
 --
-ALTER TABLE `tb_cliente`
-  ADD PRIMARY KEY (`Cli_Codigo`);
+-- ALTER TABLE `tb_cliente`
+--   ADD PRIMARY KEY (`Cli_Codigo`);
 
 --
 -- Índices para tabela `tb_compra`
@@ -95,8 +95,8 @@ ALTER TABLE `tb_compra`
 --
 -- Índices para tabela `tb_doces`
 --
-ALTER TABLE `tb_doces`
-  ADD PRIMARY KEY (`Doc_Codigo`);
+-- ALTER TABLE `tb_doces`
+--   ADD PRIMARY KEY (`Doc_Codigo`);
 
 --
 -- Restrições para despejos de tabelas

@@ -1,0 +1,1 @@
+digitar "ngrok http 80" no console do app

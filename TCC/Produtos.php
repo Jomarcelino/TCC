@@ -57,15 +57,6 @@ $result = $banco->query($sql);
 							echo "<td><img src = ".$user_data['Doc_Img']."></td>";
 						echo "</tr>";
 				}
-				/* echo "<tr class='inputbutton'>";
-					echo "<td colspan=5>";
-						echo "<div>";
-								echo "<a href='https://api.whatsapp.com/send?phone=+5515996594697&text=Olá, tudo bem?'>";
-							echo "<button>Comprar agora!</button>";
-								echo "</a>";
-						echo "</div>";
-					echo "</td>";
-				echo "</tr>"; */
 		?>
   </tbody>
 </table>
